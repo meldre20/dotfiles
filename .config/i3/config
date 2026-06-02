@@ -25,6 +25,9 @@ exec --no-startup-id nm-applet &
 exec --no-startup-id eval `ssh-agent -s`
 exec --no-startup-id ssh-add $HOME/.ssh/github
 exec --no-startup-id eval $(gnome-keyring-daemon --start --components=secrets)
+exec --no-startup-id xset s off
+exec --no-startup-id xset -dpms
+exec --no-startup-id xset s noblank
 
 
 ###########
