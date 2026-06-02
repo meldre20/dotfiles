@@ -1,10 +1,12 @@
 alacritty
 brightnessctl
+gnome-keyring
 hyprland
 hyprlock
 hyprpaper
 inotify-tools
 i3
+libsecret
 notify-osd
 nvim
 nvm

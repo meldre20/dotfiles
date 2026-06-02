@@ -30,6 +30,7 @@ exec --no-startup-id $HOME/.config/dotfiles/trackpad.sh
 exec --no-startup-id nm-applet &
 exec --no-startup-id eval `ssh-agent -s`
 exec --no-startup-id ssh-add $HOME/.ssh/github
+exec --no-startup-id eval $(gnome-keyring-daemon --start --components=secrets)
 
 
 ###########
