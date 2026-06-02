@@ -1,11 +1,14 @@
 alacritty
+betterlockscreen
 brightnessctl
+feh
 gnome-keyring
 hyprland
 hyprlock
 hyprpaper
 inotify-tools
 i3
+i3lock-color
 libsecret
 notify-osd
 nvim

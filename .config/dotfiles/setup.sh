@@ -1,5 +1,10 @@
 #!/bin/bash
 
+bash install_programs.sh
+bash addtl_packages.sh
+
+betterlockscreen -u $HOME/Pictures/Wallpaper/
+
 cd ../..
 cp -r .config/* $HOME/.config/ 
 cp -r .git/* $HOME/.config/dotfiles/
@@ -10,8 +15,7 @@ cp .bashrc $HOME
 cp .clang-format $HOME
 cp -r .zsh $HOME
 cp -r .vscode $HOME
-
-mkdir -p $HOME/Pictures/.feh_slideshow
+cp -r Pictures/.feh_slideshow/ Pictures
 
 cd $HOME/.config/dotfiles 
 mv config config.bak

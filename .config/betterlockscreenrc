@@ -1,0 +1,26 @@
+# Effect to use: dim, blur, dimblur, pixel, color
+lockscreen_blur_strength=3          # 0–9, higher = blurrier
+lockscreen_dim_strength=30          # 0–100
+
+# Ring / circle colors (rrggbbaa format, last two digits = alpha)
+lockscreen_ring_color=ffffffff       # white ring
+lockscreen_ring_ver_color=5294E2ff   # blue while verifying
+lockscreen_ring_wrong_color=cc0000ff # red on wrong password
+lockscreen_inside_color=00000000     # transparent inside
+lockscreen_line_color=00000000       # no separator line
+
+# Text colors
+lockscreen_verif_color=ffffffff
+lockscreen_wrong_color=cc0000ff
+lockscreen_time_color=ffffffff
+lockscreen_date_color=ffffffbb
+lockscreen_layout_color=ffffffbb
+lockscreen_greeter_color=ffffffff
+
+# Font
+lockscreen_time_font="JetBrains Mono"
+lockscreen_date_font="JetBrains Mono"
+
+# Show clock
+lockscreen_time_format="%H:%M"
+lockscreen_date_format="%A, %B %d"

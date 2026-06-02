@@ -5,7 +5,7 @@ sleep_minutes=30
 function cycle_pictures() {
     for FILE in $(ls ~/Pictures/Wallpaper/.feh_slideshow/* | shuf); 
     do 
-        feh --bg-scale $FILE
+        feh --bg-fill $FILE
         sleep $(( 60 * $sleep_minutes )) 
     done
     cycle_pictures
