@@ -1,7 +1,6 @@
 #!/bin/bash
 
 bash install_programs.sh
-bash addtl_packages.sh
 
 betterlockscreen -u $HOME/Pictures/Wallpaper/
 
