@@ -14,7 +14,7 @@ cp .bashrc $HOME
 cp .clang-format $HOME
 cp -r .zsh $HOME
 cp -r .vscode $HOME
-cp -r Pictures/.feh_slideshow/ Pictures
+cp -r Pictures/* $HOME/Pictures
 
 cd $HOME/.config/dotfiles 
 mv config config.bak
