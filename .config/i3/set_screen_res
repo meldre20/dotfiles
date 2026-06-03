@@ -1,0 +1,19 @@
+#!/bin/bash
+
+mapfile -t display_outputs < <(xrandr -q | grep " connected " | awk '{print $1}')
+
+for i in "${!display_outputs[@]}"; do 
+    echo "$i: ${display_outputs[$i]}"
+done
+
+echo "Which display do you want to setup?"
+read disp_ind
+echo "You chose ${display_outputs[$disp_ind]}"
+disp=${display_outputs[$disp_ind]}
+echo "Enter your desired resolution in the form widthxheight (ex 1920x1080)"
+read res
+
+echo "$disp $res"
+read -p "Press Enter to apply changes"
+
+xrandr --output "$disp" --mode "$res"
