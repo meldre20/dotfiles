@@ -1,12 +1,10 @@
-local options = {
-  ensure_installed = { "lua", "rust", "cpp", "c" },
-
-  highlight = {
-    enable = true,
-    use_languagetree = true,
-  },
-
-  indent = { enable = true },
+return {
+    ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline" },
+    sync_install = false,
+    auto_install = true,
+    highlight = {
+        enable = true,
+        additional_vim_regex_highlighting = false,
+    },
+    indent = { enable = true },
 }
-
-return options
