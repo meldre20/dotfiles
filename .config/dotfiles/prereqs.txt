@@ -9,6 +9,7 @@ hyprpaper
 inotify-tools
 i3
 i3lock-color
+kitty
 libsecret
 notify-osd
 nvim
