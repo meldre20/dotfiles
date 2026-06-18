@@ -1,8 +1,16 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = true
 [remote "origin"]
 	url = git@github.com:MartinPlusPlus/dotfiles.git
-	fetch = +refs/heads/*:refs/remotes/origin/*
+[status]
+	showUntrackedFiles = no
 [branch "master"]
 	remote = origin
 	merge = refs/heads/master
-[status]
-	showUntrackedFiles = no
+[pull]
+	rebase = true
+
+[alias]
+	addtracked = !git add $(git ls-files)
