@@ -3,6 +3,7 @@ betterlockscreen
 brightnessctl
 feh
 gnome-keyring
+gsimplecal
 hyprland
 hyprlock
 hyprpaper
