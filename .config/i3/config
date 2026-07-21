@@ -13,7 +13,8 @@ set $mod Mod4
 set $resize 5
 
 # Title bar font, not really needed with gaps on
-font pango:monospace 8
+#font pango:DejaVu Sans Mono 8
+#font pango:Open Sans 9
 
 # Home dir
 set $HOME /home/martin
