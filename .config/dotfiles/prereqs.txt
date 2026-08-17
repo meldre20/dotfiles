@@ -11,6 +11,7 @@ inotify-tools
 i3
 i3lock-color
 kitty
+latexmk
 libsecret
 notify-osd
 nvim
@@ -21,5 +22,7 @@ qtile
 rofi
 spotifyd
 ttf-ubuntu-mono-nerd
+texlive-full
 waybar
+zathura
 zsh
