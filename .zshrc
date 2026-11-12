@@ -50,3 +50,7 @@ export PATH="$PATH:/home/martin/.lmstudio/bin"
 
 # Enable starship promopt
 eval "$(starship init zsh)"
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/martin/.local/bin:$PATH"

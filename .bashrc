@@ -12,3 +12,7 @@ PS1='[\u@\h \W]\$ '
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/home/martin/.lmstudio/bin"
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/martin/.local/bin:$PATH"
