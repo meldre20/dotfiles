@@ -59,8 +59,8 @@ smart_gaps on
 gaps inner 10
 gaps outer 0
 
-# Not quite sure what this does, something about transfering a file to i3lock
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+# Lock screen on sleep/suspend (if xss-lock is installed)
+exec --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen -n -l dimblur
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.

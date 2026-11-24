@@ -1,26 +1,85 @@
-# Effect to use: dim, blur, dimblur, pixel, color
-lockscreen_blur_strength=3          # 0–9, higher = blurrier
-lockscreen_dim_strength=30          # 0–100
+# ~/.config/betterlockscreen/betterlockscreenrc
+# Configured for modern centered aesthetic on ultrawide resolution
 
-# Ring / circle colors (rrggbbaa format, last two digits = alpha)
-lockscreen_ring_color=ffffffff       # white ring
-lockscreen_ring_ver_color=5294E2ff   # blue while verifying
-lockscreen_ring_wrong_color=cc0000ff # red on wrong password
-lockscreen_inside_color=00000000     # transparent inside
-lockscreen_line_color=00000000       # no separator line
+# General options
+display_on=0
+span_image=false
+lock_timeout=300
+fx_list=(dimblur)
+dim_level=30
+blur_level=2
+pixel_scale=10,1000
+solid_color=161616
+description=""
+quiet=false
 
-# Text colors
-lockscreen_verif_color=ffffffff
-lockscreen_wrong_color=cc0000ff
-lockscreen_time_color=ffffffff
-lockscreen_date_color=ffffffbb
-lockscreen_layout_color=ffffffbb
-lockscreen_greeter_color=ffffffff
+# Theme colors & appearance (Carbonfox / Modern minimal palette)
+loginbox=00000000       # Seamless transparent - no corner card box
+loginshadow=00000000    # No shadow rectangle
+locktext="Type password to unlock"
+font="JetBrainsMono Nerd Font"
+ringcolor=ffffffff
+insidecolor=00000000
+separatorcolor=00000000
+ringvercolor=78a9ffff   # Soft accent blue while verifying
+insidevercolor=78a9ff22
+ringwrongcolor=ee5396ff # Vibrant pink/red on failure
+insidewrongcolor=ee539633
+timecolor=ffffffff
+time_format="%-I:%M %p"
+greetercolor=ffffff88
+layoutcolor=ffffff55
+keyhlcolor=78a9ffff     # Keypress highlight
+bshlcolor=ee5396ff      # Backspace highlight
+veriftext="Verifying..."
+verifcolor=78a9ffff
+wrongtext="Incorrect"
+wrongcolor=ee5396ff
+modifcolor=ee5396ff
+bgcolor=161616ff
+wallpaper_cmd="feh --bg-fill"
 
-# Font
-lockscreen_time_font="JetBrains Mono"
-lockscreen_date_font="JetBrains Mono"
-
-# Show clock
-lockscreen_time_format="%H:%M"
-lockscreen_date_format="%A, %B %d"
+# Centered layout with high-res typography & full date
+lockargs=(
+    -n
+    --indicator
+    --radius=60
+    --ring-width=7
+    --ind-pos="x+w/2:y+h/2+90"
+    --time-pos="x+w/2:y+h/2-120"
+    --time-align=0
+    --time-str="%-I:%M %p"
+    --time-size=86
+    --time-font="JetBrainsMono Nerd Font"
+    --time-color="ffffffff"
+    --date-pos="x+w/2:y+h/2-40"
+    --date-align=0
+    --date-str="%A, %B %-d"
+    --date-size=28
+    --date-font="JetBrainsMono Nerd Font"
+    --date-color="ffffffbb"
+    --greeter-pos="x+w/2:y+h/2+205"
+    --greeter-align=0
+    --greeter-text="Type password to unlock"
+    --greeter-size=20
+    --greeter-font="JetBrainsMono Nerd Font"
+    --greeter-color="ffffff88"
+    --verif-pos="x+w/2:y+h/2+90"
+    --verif-align=0
+    --verif-text="Verifying..."
+    --verif-size=16
+    --verif-font="JetBrainsMono Nerd Font"
+    --verif-color="78a9ffff"
+    --wrong-pos="x+w/2:y+h/2+90"
+    --wrong-align=0
+    --wrong-text="Incorrect"
+    --wrong-size=16
+    --wrong-font="JetBrainsMono Nerd Font"
+    --wrong-color="ee5396ff"
+    --layout-pos="x+w/2:y+h/2+240"
+    --layout-align=0
+    --layout-size=14
+    --layout-font="JetBrainsMono Nerd Font"
+    --layout-color="ffffff55"
+    --noinput-text=""
+)

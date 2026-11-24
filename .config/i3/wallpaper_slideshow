@@ -1,14 +1,19 @@
-#!/bin/sh
+#!/bin/bash
 
 sleep_minutes=30
+wallpaper_dir="$HOME/Pictures/Wallpaper/.feh_slideshow"
 
-function cycle_pictures() {
-    for FILE in $(ls ~/Pictures/Wallpaper/.feh_slideshow/* | shuf); 
-    do 
-        feh --bg-fill $FILE
-        sleep $(( 60 * $sleep_minutes )) 
+cycle_pictures() {
+    find "$wallpaper_dir" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) | shuf | while read -r FILE; do
+        if [ -f "$FILE" ]; then
+            feh --bg-fill "$FILE"
+            # Asynchronously update betterlockscreen cache at idle CPU priority
+            nice -n 19 betterlockscreen -u "$FILE" --fx dimblur >/dev/null 2>&1 &
+            sleep $(( 60 * sleep_minutes ))
+        fi
     done
-    cycle_pictures
 }
 
-cycle_pictures
+while true; do
+    cycle_pictures
+done
